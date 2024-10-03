@@ -1,0 +1,70 @@
+/* register.component.css */
+
+/* Style for the register container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style for the register box */
+  .register-box {
+    width: 400px; /* Increased width */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for form groups */
+  .form-group {
+    margin-bottom: 15px;
+    /* margin-right: 10px; */
+  }
+  
+  /* Style for the input fields */
+  .form-control {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for the error messages */
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }
+  
+  /* Style for the submit button */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Change button color on hover */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for the login link */
+  .login-link {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .login-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
