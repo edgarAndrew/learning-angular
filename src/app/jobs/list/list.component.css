@@ -1,0 +1,148 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+#username{
+  color: #3D3BF3;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 2rem 0; */
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+/* Container for the job list */
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Individual job card styling */
+.job-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  background-color: #EBEAFF;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Card hover effect */
+.job-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Job title and company styling */
+.job-item h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #333;
+}
+
+/* Job detail paragraphs */
+.job-item p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #555;
+}
+
+/* Buttons container */
+.job-item div {
+  margin-top: 16px;
+  display: flex;
+  column-gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* Buttons styling */
+.edit-button,
+.delete-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 80px;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #a71d2a;
+}
+
+/* No jobs message styling */
+.no-jobs {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0; 
+}
+
+.add-button {
+  width: clamp(350px, 55vw, 450px); /* Scales between 250px and 400px */
+  /* width: 60%; */
+  min-width: 200px;
+  text-align: center;
+  background: linear-gradient(90deg, #9694FF, #625ff6); /* Gradient background */
+  color: white;
+  padding: 12px 20px; /* More padding for better click area */
+  border: none;
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-weight: bold;
+  text-transform: uppercase; /* Bold and uppercase for emphasis */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.add-button:hover {
+  transform: scale(1.05); /* Button grows slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+  .logout-button {
+    background-color: #3685f4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #f43636;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

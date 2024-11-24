@@ -1,1 +1,31 @@
-<h1>Welcome, {{ username }}!</h1>
+<div class="root">
+  <app-loader></app-loader>
+  <div class="header">
+    <h1>Welcome, <span id="username">{{ username }}</span> !</h1>
+    <button (click)="logout()" class="logout-button">Log out</button>
+  </div>
+  <div class="add-button-container">
+    <button class="add-button" (click)="addJob()">Add Job</button>
+  </div>
+  
+  <!-- job-list.component.html -->
+  <div class="job-list" *ngIf="jobs.length > 0; else noJobs">
+      <div *ngFor="let job of jobs" class="job-item">
+        <h3>{{ job.position }} at {{ job.company }}</h3>
+        <p><strong>Status:</strong> {{ job.status }}</p>
+        <p><strong>Created:</strong> {{ job.createdAt.slice(0, 10).split('-').reverse().join('-')}}</p>
+        <p><strong>Updated:</strong> {{ job.updatedAt.slice(0, 10).split('-').reverse().join('-')}}</p>
+        <div>
+          <button class="edit-button" (click)="editJob(job._id,job.company,job.position,job.status)">Edit</button>
+          <button class="delete-button" (click)="deleteJob(job._id)">Delete</button>
+        </div>
+        
+      </div>
+    </div>
+    
+    <ng-template #noJobs class="no-jobs">
+      <p>No jobs available.</p>
+    </ng-template>
+</div>
+
+  

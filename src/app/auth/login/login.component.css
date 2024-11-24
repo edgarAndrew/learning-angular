@@ -1,18 +1,25 @@
-  
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
   
   /* Container for the login form */
   .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 98vh;
+    background-image: linear-gradient(to right,#EBEAFF,#9694FF);
   }
   
   /* Styling for the login box */
   .login-box {
-    background-color: white;
+    background-color: #ECF2FF;
     padding: 40px;
-    width: 300px;
+    width: 40%;
+    min-width: 300px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }

@@ -1,6 +1,8 @@
 <div class="register-container">
+  <app-loader></app-loader>
     <div class="register-box">
-      <h2 style="text-align: center;">Register</h2>
+      <h2 style="text-align: center;margin: 1rem 0 2rem 0;">Register</h2>
+      
       <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
         <div class="form-group">
           <label for="name">Name</label>

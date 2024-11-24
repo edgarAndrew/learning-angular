@@ -12,5 +12,5 @@ export const routes: Routes = [
     { path: 'jobs', component: ListComponent },
     { path: 'jobs/add', component: AddComponent },
     { path: 'jobs/edit/:id', component: EditComponent },
-    { path: '', redirectTo: '/login', pathMatch: 'full' } // Default route
+    { path: '', redirectTo: '/jobs', pathMatch: 'full' } // Default route
 ];

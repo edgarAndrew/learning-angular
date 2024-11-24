@@ -1,1 +1,39 @@
-<p>add works!</p>
+<div class="root">
+    <app-loader></app-loader>
+    <div class="edit-container">
+        <h1>Add Job</h1>
+        <form (ngSubmit)="onSubmit()" #editForm="ngForm">
+          <!-- Title Input -->
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input 
+              type="text" 
+              id="company" 
+              name="company" 
+              class="form-control" 
+              [(ngModel)]="job.company" 
+              required 
+              placeholder="Enter company">
+          </div>
+
+          <div class="form-group">
+            <label for="position">Position</label>
+            <input 
+              type="text" 
+              id="position" 
+              name="position" 
+              class="form-control" 
+              [(ngModel)]="job.position" 
+              required 
+              placeholder="Enter job position">
+          </div>
+      
+          <!-- Done Button -->
+          <div class="button-container">
+            <button type="submit" class="done-button" [disabled]="editForm.invalid">Done</button>
+          </div>
+        </form>
+      </div>
+</div>
+
+  
